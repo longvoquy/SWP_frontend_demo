@@ -89,12 +89,12 @@ const SignUpScreen = () => {
             scrollToFirstError
           >
             <Form.Item
-              name="full_name"
-              label="Full name"
+              name="user_name"
+              label="User name"
               rules={[
                 {
                   required: true,
-                  message: "Please input full name!",
+                  message: "Please input user name!",
                 },
               ]}
             >
@@ -162,7 +162,7 @@ const SignUpScreen = () => {
                 }),
               ]}
             >
-              <Input.Password placeholder="Confirm your email" />
+              <Input.Password placeholder="Confirm your password" />
             </Form.Item>
             <Form.Item
               className="left"

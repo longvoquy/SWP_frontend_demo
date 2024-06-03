@@ -71,7 +71,7 @@ const ProfileScreen = () => {
     setAbout(user?.about)
   }, [user])
   const handleNameOk = () => {
-    const body = { nfull_name: name };
+    const body = { puser_name: name };
     changeNameMutation.mutate(body, {
       onSuccess() {
         queryClient.invalidateQueries("USER_PROFILE");
@@ -238,7 +238,7 @@ const ProfileScreen = () => {
                   </div>
                   <div className="text-center mt-12">
                     {changeNameMutation.isPending ? <Loading /> : <h3 className="text-4xl font-semibold leading-normal text-blueGray-700 mb-2">
-                      {user?.full_name}
+                      {user?.user_name}
                       <button onClick={showModalName}>
 
                         <EditOutlined />
